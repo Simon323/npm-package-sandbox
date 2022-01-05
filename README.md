@@ -55,6 +55,9 @@ $ npx tsc --init
 ```bash
 # prepare package to publish into npm
 $ npx tsc
+
+# watch
+$ npx tsc --watch
 ```
 
 ## Npm login
