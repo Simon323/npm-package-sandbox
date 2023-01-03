@@ -49,3 +49,26 @@ $ npx tsc --init
   "exclude": ["node_modules"]
 }
 ```
+
+## Create dist
+
+```bash
+# prepare package to publish into npm
+$ npx tsc
+```
+
+## Npm login
+
+```bash
+# login to npm
+$ npm login
+
+# publish package
+$ npm publish
+```
+
+## Run e.g in index.ts
+
+```bash
+$ ts-node app.ts
+```
