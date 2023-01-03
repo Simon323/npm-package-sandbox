@@ -29,5 +29,23 @@ $ npm install typescript
 ## Init TypeScript
 
 ```bash
+# init
 $ npx tsc --init
+```
+
+## Overwrite tsconfig.json
+
+```json
+{
+  "compilerOptions": {
+    "module": "Commonjs",
+    "target": "es2015",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "noImplicitAny": true,
+    "declaration": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
 ```
