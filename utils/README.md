@@ -72,3 +72,10 @@ $ npm publish
 ```bash
 $ ts-node app.ts
 ```
+
+## Link in test proj
+
+```bash
+# in cmd into test proj
+$ npm link ../utils
+```
