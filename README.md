@@ -129,6 +129,7 @@ const config: Config.InitialOptions = {
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   coverageDirectory: "./coverage/",
   collectCoverage: true,
+  modulePathIgnorePatterns: ["__mocks__"],
 };
 
 export default config;
