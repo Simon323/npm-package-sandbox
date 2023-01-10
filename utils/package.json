@@ -8,8 +8,10 @@
     "/dist"
   ],
   "scripts": {
-    "watch": "npx tsc --watch",
-    "test": "jest --coverage"
+    "build": "npx tsc --project tsconfig.build.json",
+    "build:watch": "npx tsc --project tsconfig.build.json --watch",
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watch"
   },
   "keywords": [],
   "author": "",

@@ -7,6 +7,6 @@
     "noImplicitAny": true,
     "declaration": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/__test__"],
   "exclude": ["node_modules"]
 }

@@ -15,7 +15,10 @@ $ npm init -y
   "files": ["/dist"],
     "scripts": {
     ...
-    "watch": "npx tsc --watch"
+    "build": "npx tsc --project tsconfig.build.json",
+    "build:watch": "npx tsc --project tsconfig.build.json --watch",
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watch"
   },
 }
 ```
@@ -51,6 +54,17 @@ $ npx tsc --init
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
+}
+```
+
+## Create tsconfig.build.json if you wana use Jest
+
+```json
+{
+  "extends": "./tsconfig.json",
+  // 👇️ this may vary depending on how you
+  // name your test files
+  "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"]
 }
 ```
 
