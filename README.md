@@ -13,6 +13,10 @@ $ npm init -y
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["/dist"],
+    "scripts": {
+    ...
+    "watch": "npx tsc --watch"
+  },
 }
 ```
 
