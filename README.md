@@ -20,7 +20,7 @@ $ npm init -y
 }
 ```
 
-## Install
+## Install TS
 
 ```bash
 # npm packages
@@ -85,4 +85,37 @@ $ ts-node app.ts
 ```bash
 # in cmd into test proj
 $ npm link ../utils
+```
+
+## Tests with Jest
+
+```bash
+# npm packages
+- @types/jest
+- jest
+- ts-jest
+- ts-node
+
+# install
+$ npm install --save-dev @types/jest jest ts-jest ts-node
+```
+
+### Jest configuration
+
+In root dir create `jest.config.ts`, put inside bellow code
+
+```ts
+import type { Config } from "@jest/types";
+
+const config: Config.InitialOptions = {
+  transform: {
+    "^.+\\.(t|j)sx?$": "ts-jest",
+  },
+  testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+  coverageDirectory: "./coverage/",
+  collectCoverage: true,
+};
+
+export default config;
 ```
