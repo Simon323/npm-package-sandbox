@@ -109,9 +109,10 @@ $ npm link ../utils
 - jest
 - ts-jest
 - ts-node
+- jest-environment-jsdom # env for DOM operations
 
 # install
-$ npm install --save-dev @types/jest jest ts-jest ts-node
+$ npm install --save-dev @types/jest jest ts-jest ts-node jest-environment-jsdom
 ```
 
 ### Jest configuration
@@ -130,6 +131,7 @@ const config: Config.InitialOptions = {
   coverageDirectory: "./coverage/",
   collectCoverage: true,
   modulePathIgnorePatterns: ["__mocks__"],
+  testEnvironment: "jsdom",
 };
 
 export default config;

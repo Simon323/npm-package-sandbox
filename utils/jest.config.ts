@@ -9,6 +9,7 @@ const config: Config.InitialOptions = {
   coverageDirectory: "./coverage/",
   collectCoverage: true,
   modulePathIgnorePatterns: ["__mocks__"],
+  testEnvironment: "jsdom",
 };
 
 export default config;
